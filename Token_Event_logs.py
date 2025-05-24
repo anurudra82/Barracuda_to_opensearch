@@ -16,8 +16,8 @@ WAAS_API_TOKEN = "eyJhY2NfaWQiOiAxMTIyNzM0NywgInVzZXJfaWQiOiAyMDg1ODIzNTIsICJleH
 ist = pytz.timezone('Asia/Kolkata')
 today_ist = datetime.now(ist).strftime('%Y.%m.%d')
 OPENSEARCH_URL = f'https://18.190.239.86:9200/barracuda-waas-logs-{today_ist}/_doc'
-OPENSEARCH_USER = "admin"
-OPENSEARCH_PASS = "Workmates#2025"
+OPENSEARCH_USER = "admin"            # Replace with User
+OPENSEARCH_PASS = "Passwords"        # Replace with Passwords
 
 POST_HEADERS = {
     'Content-Type': 'application/json'
