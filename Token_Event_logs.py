@@ -15,7 +15,7 @@ WAAS_API_TOKEN = "eyJhY2NfaWQiOiAxMTIyNzM0NywgInVzZXJfaWQiOiAyMDg1ODIzNTIsICJleH
 # Set IST timezone for index naming
 ist = pytz.timezone('Asia/Kolkata')
 today_ist = datetime.now(ist).strftime('%Y.%m.%d')
-OPENSEARCH_URL = f'https://18.190.239.86:9200/barracuda-waas-logs-{today_ist}/_doc'
+OPENSEARCH_URL = f'https://x.x.x.x:9200/barracuda-waas-logs-{today_ist}/_doc'    # Replace IP address
 OPENSEARCH_USER = "admin"            # Replace with User
 OPENSEARCH_PASS = "Passwords"        # Replace with Passwords
 
