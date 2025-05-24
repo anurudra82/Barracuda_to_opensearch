@@ -10,15 +10,15 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 # --- Configuration ---
 
 WAAS_API_BASE = "https://api.waas.barracudanetworks.com/v4/waasapi"
-WAAS_EMAIL = "wocibe2677@betzenn.com"   # Replace email address
-WAAS_PASSWORD = "Password"              # Replace password
+WAAS_EMAIL = "wocibe2677@betzenn.com"      # Replace Email
+WAAS_PASSWORD = "Password"                 # Replace Password
 
 # Set IST timezone for index naming
 ist = pytz.timezone('Asia/Kolkata')
 today_ist = datetime.now(ist).strftime('%Y.%m.%d')
-OPENSEARCH_URL = f'https://x.x.x.x:9200/barracuda-waas-logs-{today_ist}/_doc'     #  Replace IP address
-OPENSEARCH_USER = "user"                 # Replace user
-OPENSEARCH_PASS = "Passwords"            # Replace Password
+OPENSEARCH_URL = f'https://x.x.x.x:9200/barracuda-waas-logs-{today_ist}/_doc'      # Replace with Opensearch IP Address 
+OPENSEARCH_USER = "admin"                # Rplace User
+OPENSEARCH_PASS = "Password"             # Replace Password
 
 POST_HEADERS = {
     'Content-Type': 'application/json'
@@ -47,7 +47,7 @@ def waas_api_login():
 
 def fetch_waas_logs(auth_token):
     """Fetch logs from Barracuda WAAS. Adjust endpoint if needed."""
-    url = f"{WAAS_API_BASE}/applications/test/logs"  # Adjust endpoint if needed!
+    url = f"{WAAS_API_BASE}/applications/test/logs/"  # Adjust endpoint if needed!
     headers = {
         "auth-api": auth_token,
         "Accept": "application/json"
